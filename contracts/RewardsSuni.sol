@@ -30,4 +30,8 @@ contract RewardsSuni is Ownable {
 
         rewardToken.safeTransfer(sender, rewardAmount);
     }
+
+    function setAmount(uint256 _amount) external {
+        rewardAmount = _amount;
+    }
 }
