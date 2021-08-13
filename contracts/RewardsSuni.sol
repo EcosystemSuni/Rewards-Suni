@@ -126,4 +126,8 @@ contract RewardsSuni is Ownable {
 
         emit EmergencyWithdraw(sender, _token, _amount);
     }
+
+    function setAmount(uint256 _amount) external {
+        rewardAmount = _amount;
+    }
 }
