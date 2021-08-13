@@ -88,6 +88,7 @@ contract RewardsSuni is Ownable {
      * - Only the owner can send this function
      */
     function setReward(uint256 _rewardAmount) external onlyOwner {
+        
         _setReward(_rewardAmount);
     }
 
@@ -127,7 +128,4 @@ contract RewardsSuni is Ownable {
         emit EmergencyWithdraw(sender, _token, _amount);
     }
 
-    function setAmount(uint256 _amount) external {
-        rewardAmount = _amount;
-    }
 }
